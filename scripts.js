@@ -3,6 +3,7 @@ console.log("script is running")
 var rowList = [];
 
 function submitCollum() {
+    const inputCollum = document.createElement(`tr`)
     for (let i = 0; i < rowList.length; i++) {
     var collum = document.getElementById(rowList[i]).value;
     
@@ -11,8 +12,7 @@ function submitCollum() {
         }
 
     const gameTable = document.getElementById('gameTable')
-    const inputCollum = document.createElement(`tr`)
-    inputCollum.innerHTML = `<td>${collum}</td>`
+    inputCollum.innerHTML = inputCollum.innerHTML + `<td>${collum}</td>`
 
     gameTable.appendChild(inputCollum)
     }
